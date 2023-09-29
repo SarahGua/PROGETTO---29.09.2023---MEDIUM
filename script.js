@@ -1,12 +1,15 @@
-// const header = document.querySelector('header')
-// const nav = document.querySelector('nav')
+window.addEventListener('scroll', function(){
+    const nav = document.querySelector('nav')
+    const button = document.getElementById('button-nav')
+    // const height = window.innerHeight;
+    // const vhPixels = height * 0.5
 
-
-// window.addEventListener('scroll', function(){
-//     const halfHeaderHeigth = header.clientHeight / 2
-//     if (this.window.scrollY > halfHeaderHeigth) {
-//         nav.classList.add('animated')
-//     } else {
-//         nav.classList.remove('animated')
-//     }
-// })
+    if (this.window.scrollY >  window.innerHeight / 2){
+        nav.classList.add('animated') 
+        button.classList.add('button-animated')
+    } else {
+        nav.classList.remove('animated') 
+        button.classList.remove('button-animated')
+    }
+    
+})

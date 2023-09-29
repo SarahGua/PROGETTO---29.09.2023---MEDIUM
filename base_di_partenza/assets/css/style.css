@@ -34,6 +34,36 @@ ul + div {
     color: white;
 }
 
+.button-animated {
+    animation: butAnimation 1s linear 1 forwards;
+}
+
+.button-not-animated{
+    animation: notAnimation 1s linear 1 forwards;
+}
+
+@keyframes notAnimated {
+    0% {
+        background-color: green;
+        color: white;
+    }
+    100% {
+        background-color: black;
+        color: white;
+    }
+}
+
+@keyframes butAnimation {
+    0% {
+        background-color: black;
+        color: white;
+    }
+    100% {
+        background-color: green;
+        color: white;
+    }
+}
+
 header {
    
     background-color: #ffc017;
@@ -54,7 +84,7 @@ nav {
 }
 
 .animated {
-    animation: navAnimation 2s lienear 1;
+    animation: navAnimation 1s linear 1 forwards;
 }
 
 @keyframes navAnimation {
@@ -311,4 +341,9 @@ div#final-list {
 div#final-list > * {
     margin: 0.5em 1em;
     color: grey;
+}
+
+div#aside {
+    position: sticky;
+    top: 107px;
 }
